@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Backend API</title>
+    <title>CareLogix- Healthcare Backend API</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,16 +37,21 @@
             border-radius: 3px;
             font-weight: bold;
             margin-right: 10px;
+            color: white;
         }
-        .get { background: #61affe; color: white; }
-        .post { background: #49cc90; color: white; }
-        .put { background: #fca130; color: white; }
-        .delete { background: #f93e3e; color: white; }
+        .get { background: #61affe; }
+        .post { background: #49cc90; }
+        .put { background: #fca130; }
+        .delete { background: #f93e3e; }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Healthcare Backend API</h1>
+        <h1>CareLogix- Healthcare Backend API</h1>
         <p>Welcome to the Healthcare Management System API. Use the following endpoints:</p>
         
         <h2>Authentication Endpoints</h2>
@@ -121,7 +126,15 @@
             <strong>/api/mappings/&lt;id&gt;/delete/</strong> - Remove mapping
         </div>
         
-        <p>Use tools like Postman or Thunder Client to test these API endpoints.</p>
+        <h2>Testing Instructions</h2>
+        <ol>
+            <li>Use Postman or Thunder Client to test the API endpoints</li>
+            <li>Start with registering a user at <code>POST /api/auth/register/</code></li>
+            <li>Then login to get JWT tokens at <code>POST /api/auth/login/</code></li>
+            <li>Use the access token in the Authorization header for protected endpoints</li>
+        </ol>
+        
+        <p class="success">Your healthcare backend is ready to use!</p>
     </div>
 </body>
 </html>
