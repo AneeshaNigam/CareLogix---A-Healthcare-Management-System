@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Backend API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .endpoint {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+        .method {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .get { background: #61affe; color: white; }
+        .post { background: #49cc90; color: white; }
+        .put { background: #fca130; color: white; }
+        .delete { background: #f93e3e; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Healthcare Backend API</h1>
+        <p>Welcome to the Healthcare Management System API. Use the following endpoints:</p>
+        
+        <h2>Authentication Endpoints</h2>
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/auth/register/</strong> - Register a new user
+        </div>
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/auth/login/</strong> - Login user and get JWT tokens
+        </div>
+        
+        <h2>Patient Management</h2>
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/patients/</strong> - Add a new patient
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/patients/</strong> - Get all patients
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/patients/&lt;id&gt;/</strong> - Get patient details
+        </div>
+        <div class="endpoint">
+            <span class="method put">PUT</span>
+            <strong>/api/patients/&lt;id&gt;/update/</strong> - Update patient
+        </div>
+        <div class="endpoint">
+            <span class="method delete">DELETE</span>
+            <strong>/api/patients/&lt;id&gt;/delete/</strong> - Delete patient
+        </div>
+        
+        <h2>Doctor Management</h2>
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/doctors/</strong> - Add a new doctor
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/doctors/</strong> - Get all doctors
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/doctors/&lt;id&gt;/</strong> - Get doctor details
+        </div>
+        <div class="endpoint">
+            <span class="method put">PUT</span>
+            <strong>/api/doctors/&lt;id&gt;/update/</strong> - Update doctor
+        </div>
+        <div class="endpoint">
+            <span class="method delete">DELETE</span>
+            <strong>/api/doctors/&lt;id&gt;/delete/</strong> - Delete doctor
+        </div>
+        
+        <h2>Patient-Doctor Mapping</h2>
+        <div class="endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/mappings/</strong> - Assign doctor to patient
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/mappings/</strong> - Get all mappings
+        </div>
+        <div class="endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/mappings/&lt;patient_id&gt;/</strong> - Get doctors for a patient
+        </div>
+        <div class="endpoint">
+            <span class="method delete">DELETE</span>
+            <strong>/api/mappings/&lt;id&gt;/delete/</strong> - Remove mapping
+        </div>
+        
+        <p>Use tools like Postman or Thunder Client to test these API endpoints.</p>
+    </div>
+</body>
+</html>
